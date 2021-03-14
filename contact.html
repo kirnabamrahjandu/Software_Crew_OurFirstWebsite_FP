@@ -15,6 +15,8 @@
     <meta name="author" content="">
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+    <!-- <link rel="stylesheet" href="css/styles.scss"> -->
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- fevicon -->
@@ -44,7 +46,52 @@
     </div>
 </header>
 
-<body></body>
+<body>
+    <main>
+        <div class="choose-text">
+            <h1>Contact Us</h1>
+            <h4>We will reach you as possible.</h4>
+        </div>
+
+        <div class="business-hours">
+            <div class="choose-grey-text">
+                <h2 class="title">Opening Hours</h2>
+            </div>
+            <ul class="list-unstyled opening-hours choose-text" style="list-style-type:none;">
+                <li>Sunday <span class="pull-right">Closed</span></li>
+                <li>Monday <span class="pull-right">9:00-22:00</span></li>
+                <li>Tuesday <span class="pull-right">9:00-22:00</span></li>
+                <li>Wednesday <span class="pull-right">9:00-22:00</span></li>
+                <li>Thursday <span class="pull-right">9:00-22:00</span></li>
+                <li>Friday <span class="pull-right">9:00-23:30</span></li>
+                <li>Saturday <span class="pull-right">14:00-23:30</span></li>
+            </ul>
+        </div>
+        <div class="choose-text">
+            <h4>Return Policies</h4>
+        </div>
+        <div class="questions-area"><input class="animate" type="radio" name="question" id="q1" />
+            <label class="animate" for="q1">Q: What can I return?</label>
+            <p class="response animate">A: You may request returns for most items you buy from Amazon.in, except those
+                that are explicitly identified as not returnable. For details of time frame for requesting returns
+                please refer to our returns policy.</p>
+
+            <input class="animate" type="radio" name="question" id="q2" />
+            <label class="animate" for="q2">Q: When will I get my refund?</label>
+            <p class="response animate">A: Refunds back to Credit Cards, Debit Cards, Net Banking or Bank Accounts
+                (NEFT) are fully refunded within 3-5 days after we receive and process your return. Refunds in form of
+                cheques can take 10-12 business days to arrive via post. Refund in the form of Gift Cards can take 1
+                business day.</p>
+
+            <input class="animate" type="radio" name="question" id="q3" />
+            <label class="animate" for="q3">Q: Does Shop Online do replacements?</label>
+            <p class="response animate">A: Amazon offers free replacement for FBA orders including Kindle. Follow the
+                steps in the Return Center to request a replacement for your FBA order.</p>
+
+        </div>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
 <!-- Site footer -->
 <footer class="footer-distributed">
 

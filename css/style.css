@@ -606,7 +606,170 @@ button {
 .color-yellow{
   color: #ffc221;
 }
+.color-grey{
+  color: #444444;
+}
 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 23%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.progress-wrap {
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  margin: 0 0 20px 0;
+}
+.progress-wrap progress {
+  width: 100%;
+  margin: 0 0 5px 0;
+}
+input[name="question"] {
+  display: none;
+}
+input[name="question"] + label {
+  position: relative;
+  display: block;
+  padding: 20px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  background: rgba(246, 246, 246, 1);
+  color: #444444;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.response {
+  position: relative;
+  background: #ffc221;
+  color: #7a2723;
+  padding: 0px 0px;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  border-radius: 3px;
+}
+
+input[name="question"]:checked + label {
+  background: #f6f6f6;
+  color: #5a9aa8;
+}
+input[name="question"]:checked + label + .response {
+  opacity: 1;
+  visibility: visible;
+  padding: 10px 20px;
+  -webkit-transform: translate3d(0, 0, 0) rotate(0deg);
+  -webkit-filter: blur(0px);
+  margin-bottom: 20px;
+  color: white;
+}
+
+.fixed-height {
+  height: 50px;
+  overflow: hidden;
+  opacity: 1 !important;
+}
+.questions-area {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.choose-grey-text{
+  margin-top:0px;
+  background-color: white;
+  text-align: center;
+  color: #444444;
+  font-size: 2rem;
+  
+}
+.demo-bg{
+  background: #ffac0c;
+  margin-top: 60px;
+  }
+
+.business-hours {
+  background: #222; 
+  padding: 40px 14px;
+  margin-top: -15px;
+  position: relative;
+  }
+  .business-hours:before{
+  content: '';
+  width: 23px;
+  height: 23px;
+  background: #111;
+  position: absolute;
+  top: 5px;
+  left: -12px;
+  transform: rotate(-45deg);
+  z-index: -1;
+  }
+  .business-hours .title {
+  font-size: 20px;
+  color: #BBB;
+  text-transform: uppercase;
+  padding-left: 5px;
+  border-left: 4px solid #ffac0c; 
+  }
+  .business-hours li {
+  color: #888;
+  line-height: 30px;
+  border-bottom: 1px solid #333; 
+  }
+  .business-hours li:last-child {
+  border-bottom: none; 
+  }
+  .business-hours .opening-hours li.today {
+  color: #ffac0c; 
+  }
 @media (max-width: 880px) {
  
 	.footer-distributed{
