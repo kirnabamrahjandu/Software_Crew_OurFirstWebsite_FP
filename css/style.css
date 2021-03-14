@@ -753,11 +753,14 @@ input[name="question"]:checked + label + .response {
   z-index: -1;
   }
   .business-hours .title {
-  font-size: 20px;
-  color: #BBB;
-  text-transform: uppercase;
-  padding-left: 5px;
-  border-left: 4px solid #ffac0c; 
+    font-size: 20px;
+    color: #BBB;
+    text-transform: uppercase;
+    padding-left: 5px;
+    border-left: 4px solid #ffac0c;
+    padding-bottom: 22px;
+    padding-top: 22px;
+
   }
   .business-hours li {
   color: #888;
