@@ -485,8 +485,39 @@ footer{
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
+ .about-row:after{
+  /* box-sizing: border-box;
+  display: flex; */
+ }
+
+ .about-column {
+  float: left;
+  padding-left: 150px;
+  height: 150px;
+}
+
+ .about-text-column {
+  float: left;
+  padding-left: 30px;
+}
+ .about-us-paragraph {
+  /* float: left; */
+  padding-left: 30px;
+}
  
- 
+.about-us-text{
+  background-color: white;
+  text-align: center;
+  color: #ffc221;
+  font-size: 2rem;
+  
+}
+.about-us-banner{
+  padding-top:10px;
+  text-align: center;
+  color: white;
+  margin-top: 15px;
+}
 @media (max-width: 880px) {
  
 	.footer-distributed{
