@@ -736,7 +736,7 @@ input[name="question"]:checked + label + .response {
   }
 
 .business-hours {
-  background: #222; 
+  background: #ffc221; 
   padding: 40px 14px;
   margin-top: -15px;
   position: relative;
