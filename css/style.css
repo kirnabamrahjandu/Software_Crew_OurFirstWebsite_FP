@@ -800,7 +800,6 @@ form input {
 }
 form input[type="email"],
 form input[type="url"],
-form input[type="radio"],
 form input[type="password"],
 form input[type="date"] {
   background: #fff;
@@ -810,7 +809,6 @@ form input[type="date"] {
   border-radius: 2px;
 }
 form input[type="email"]:focus,form input[type="date"]:focus,
-form input[type="radio"]:focus,
 form input[type="password"]:focus,
 form input[type="url"]:focus {
   background: #fff;
@@ -856,7 +854,7 @@ form label {
   transition: color 0.3s, top 0.3s, background-color 0.8s;
 }
 form label.floatLabel {
-  top: -11px;
+  top: -6px;
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
 }
