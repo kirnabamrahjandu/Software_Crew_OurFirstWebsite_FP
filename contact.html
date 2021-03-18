@@ -15,8 +15,6 @@
     <meta name="author" content="">
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
-    <!-- <link rel="stylesheet" href="css/styles.scss"> -->
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- fevicon -->
@@ -27,12 +25,14 @@
         <a href="index.html">
             <img src="images/logo.jpg" alt="logo" width="100px" class="text-left header-image" />
         </a>
-        <a href="signUp.html" class="text-right sign-up">
+        <a href="signUp.html" class="text-right sign-up" id="logged-in">
             Sign Up
         </a>
-        <a href="signIn.html" class="text-right sign-in">
+        <a href="signIn.html" class="text-right sign-in" id="logged-sign-in">
             Sign In
         </a>
+        <div class="text-right sign-up" id="login-user"></div>
+        <a id="logoutId" onclick="LogOut()" class="text-right sign-up wishlist">logout</a>
     </div>
 
     <div class="nav">
@@ -42,8 +42,10 @@
             <li class="about"><a href="about.html">About</a></li>
             <li class="news"><a href="blog.html">Blog</a></li>
             <li class="contact"><a class="active" href="contact.html">Contact</a></li>
+            <li class="contact wishlist-page" id="wishlist-page"><a href="favourites.html">Favourite</a></li>
         </ul>
     </div>
+
 </header>
 
 <body>
@@ -90,6 +92,7 @@
 
         </div>
     </main>
+    <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 <!-- Site footer -->
