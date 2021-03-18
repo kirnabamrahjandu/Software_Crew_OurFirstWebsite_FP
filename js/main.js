@@ -1,3 +1,18 @@
+$(document).ready(function () {
+    if (sessionStorage.getItem('user_name') == ' ') {
+        document.getElementById("login-user").style.display = "none";
+        document.getElementById("logoutId").style.display = 'none';
+        document.getElementById("wishlist-page").style.display = 'none';
+
+    } else {
+
+        document.getElementById("login-user").innerHTML = sessionStorage.getItem('user_name');
+        document.getElementById("logged-sign-in").style.display = 'none';
+        document.getElementById("logged-in").style.display = "none";
+    }
+
+});
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -7,6 +22,50 @@ function plusSlides(n) {
 
 function currentSlide(n) {
     showSlides(slideIndex = n);
+}
+
+function addToWishlist(elem) {
+    var productName = document.getElementById("product-price-" + elem).innerHTML;
+    var addCard = '<div class="productCard" id="product-price-' + elem + '" >' + productName + '</div > ';
+    var getFavoriteData = localStorage.getItem('favourite');
+    if (getFavoriteData !== null && getFavoriteData !== '') {
+        getFavoriteData += addCard;
+    } else {
+        getFavoriteData = addCard;
+    }
+    localStorage.setItem('favourite', getFavoriteData);
+    //document.getElementById("favourites-list-card").innerHTML = localStorage.getItem('favourite');
+    alert('Item inserted into favourites');
+}
+
+function LogOut() {
+    sessionStorage.setItem("user_name", ' ');
+    document.getElementById("logged-in").style.display = "none";
+    window.location.href = "index.html";
+    alert('Logged Out Successfully');
+}
+function SignIn() {
+    let Email = document.getElementById("formSignIn").elements.Email.value;
+    let Pass = document.getElementById("formSignIn").elements.password.value;
+    let data = JSON.parse(localStorage.getItem(Email));
+    if (data !== null && data.Password === Pass) {
+        sessionStorage.setItem("user_name", data.Email);
+        window.location.href = "index.html";
+    } else {
+        alert('Invalid Login');
+    }
+}
+function SignUp() {
+    let data = {
+        Email: document.getElementById("formSignUp").elements.Email.value,
+        Website: document.getElementById("formSignUp").elements.website.value,
+        DOB: document.getElementById("formSignUp").elements.date_of_birth.value,
+        Password: document.getElementById("formSignUp").elements.password.value,
+        Gender: document.getElementById("formSignUp").elements.gender.value
+    }
+    localStorage.setItem(data.Email, JSON.stringify(data));
+    alert('Registered Successfully.Please login now');
+    window.location.href = "signIn.html";
 }
 
 function showSlides() {
@@ -47,42 +106,3 @@ $(function () {
 
     setHeight();
 });
-// alert('Heloo');
-// $("#contact-form input").keyup(function () {
-//     alert('Heloo');
-//     var numValid = 0;
-//     $("#contact-form input[required]").each(function () {
-//         if (this.validity.valid) {
-//             numValid++;
-//         }
-//     });
-
-//     var progress = $("#progress"),
-//         progressMessage = $("#progress-message");
-
-//     if (numValid == 0) {
-//         progress.attr("value", "0");
-//         progressMessage.text("The form, it wants you.");
-//     }
-//     if (numValid == 1) {
-//         progress.attr("value", "20");
-//         progressMessage.text("There you go, great start!");
-//     }
-//     if (numValid == 2) {
-//         progress.attr("value", "40");
-//         progressMessage.text("Nothing can stop you now.");
-//     }
-//     if (numValid == 3) {
-//         progress.attr("value", "60");
-//         progressMessage.text("You're basically a hero, right?");
-//     }
-//     if (numValid == 4) {
-//         progress.attr("value", "80");
-//         progressMessage.text("They are going to write songs about you.");
-//     }
-//     if (numValid == 5) {
-//         progress.attr("value", "95");
-//         progressMessage.text("SO CLOSE. PRESS THE THING.");
-//     }
-
-// });
