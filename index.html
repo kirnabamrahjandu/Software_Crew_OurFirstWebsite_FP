@@ -25,12 +25,14 @@
         <a href="index.html">
             <img src="images/logo.jpg" alt="logo" width="100px" class="text-left header-image" />
         </a>
-        <a href="signUp.html" class="text-right sign-up">
+        <a href="signUp.html" class="text-right sign-up" id="logged-in">
             Sign Up
         </a>
-        <a href="signIn.html" class="text-right sign-in">
+        <a href="signIn.html" class="text-right sign-in" id="logged-sign-in">
             Sign In
         </a>
+        <div class="text-right sign-up" id="login-user"></div>
+        <a id="logoutId" onclick="LogOut()" class="text-right sign-up wishlist">logout</a>
     </div>
 
     <div class="nav">
@@ -40,6 +42,7 @@
             <li class="about"><a href="about.html">About</a></li>
             <li class="news"><a href="blog.html">Blog</a></li>
             <li class="contact"><a href="contact.html">Contact</a></li>
+            <li class="contact wishlist-page" id="wishlist-page"><a href="favourites.html">Favourite</a></li>
         </ul>
     </div>
 
@@ -179,8 +182,9 @@
             <h1>More...</h1>
         </div>
     </section>
-
+    <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/main.js"></script>
+
 </body>
 <!-- Site footer -->
 <footer class="footer-distributed">
