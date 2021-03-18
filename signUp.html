@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <form action="#" method="post">
+    <form id="formSignUp" onsubmit="SignUp();return false">
         <h2>Sign Up</h2>
         <p>
             <label for="Email" class="floatLabel">Email</label>
@@ -43,25 +43,24 @@
         <p>
             <label for="male" class="floatLabel">Male</label>
             <input type="radio" id="male" name="gender" value="male">
-
         </p>
         <p>
             <label for="female" class="floatLabel">Female</label>
             <input type="radio" id="female" name="gender" value="female">
-
         </p>
         <p>
             <label for="other" class="floatLabel">Other</label>
             <input type="radio" id="other" name="gender" value="other">
-
         </p>
-
         </p>
         <p>
         <p>Already have account? <a href="signIn.html" style="color:#ffc221">Sign In</a></p>
+        <p>Don't want to join Now? <a href="index.html" style="color:#ffc221">Go to Home</a></p>
         <input type="submit" value="Create My Account" id="submit">
         </p>
     </form>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </head>
 
