@@ -861,6 +861,10 @@ form label.floatLabel {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
 }
+.product-list-detail {
+  min-height: 550px;
+  overflow: auto;
+}
 
 @media (max-width: 880px) {
  
