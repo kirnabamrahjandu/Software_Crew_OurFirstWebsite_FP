@@ -25,12 +25,14 @@
         <a href="index.html">
             <img src="images/logo.jpg" alt="logo" width="100px" class="text-left header-image" />
         </a>
-        <a href="signUp.html" class="text-right sign-up">
+        <a href="signUp.html" class="text-right sign-up" id="logged-in">
             Sign Up
         </a>
-        <a href="signIn.html" class="text-right sign-in">
+        <a href="signIn.html" class="text-right sign-in" id="logged-sign-in">
             Sign In
         </a>
+        <div class="text-right sign-up" id="login-user"></div>
+        <a id="logoutId" onclick="LogOut()" class="text-right sign-up wishlist">logout</a>
     </div>
 
     <div class="nav">
@@ -40,6 +42,7 @@
             <li class="about"><a href="about.html">About</a></li>
             <li class="news"><a href="blog.html">Blog</a></li>
             <li class="contact"><a href="contact.html">Contact</a></li>
+            <li class="contact wishlist-page" id="wishlist-page"><a href="favourites.html">Favourite</a></li>
         </ul>
     </div>
 
@@ -52,49 +55,49 @@
             <h4>We package the products with best services to make you a happy customer.</h4>
         </div>
         <div class="products-list-card">
-            <div class="productCard">
+            <div class="productCard" id="product-price-1">
                 <img src="images/products/shoe21.jpeg" style="width:100%" />
                 <h1>Shoes</h1>
-                <p class="productDetails">Excellent Quality</p>
-                <p>Price 25$</p>
-                <p><button>Buy Now</button></p>
+                <p class="productDetails product-name-1">Excellent Quality</p>
+                <p class="product-price-1">Price 25$</p>
+                <p><button class="addToWishlist" onclick="addToWishlist(this.value);" value="1">Buy Now</button></p>
             </div>
 
-            <div class="productCard">
+            <div class="productCard" id="product-price-2">
                 <img src="images/products/shoe19.jpeg" style="width:100%" />
                 <h1>Shoes</h1>
-                <p class="productDetails">Excellent Quality</p>
-                <p>Price 20$</p>
-                <p><button>Buy Now</button></p>
+                <p class="productDetails product-name-2">Excellent Quality</p>
+                <p class="product-price-2">Price 20$</p>
+                <p><button class="addToWishlist" onclick="addToWishlist(this.value);" value="2">Buy Now</button></p>
             </div>
 
-            <div class="productCard">
+            <div class="productCard" id="product-price-3">
                 <img src="images/products/shoe20.jpeg" style="width:100%" />
                 <h1>Shoes</h1>
-                <p class="productDetails">Excellent Quality</p>
-                <p>Price 35$</p>
-                <p><button>Buy Now</button></p>
+                <p class="productDetails product-name-3">Excellent Quality</p>
+                <p class="product-price-3">Price 35$</p>
+                <p><button class="addToWishlist" onclick="addToWishlist(this.value);" value="3">Buy Now</button></p>
             </div>
-            <div class="productCard">
+            <div class="productCard" id="product-price-4">
                 <img src="images/products/shoe12.jpeg" style="width:100%" />
                 <h1>Shoes</h1>
-                <p class="productDetails">Excellent Quality</p>
-                <p>Price 25$</p>
-                <p><button>Buy Now</button></p>
+                <p class="productDetails product-name-4">Excellent Quality</p>
+                <p class="product-price-4">Price 25$</p>
+                <p><button class="addToWishlist" onclick="addToWishlist(this.value);" value="4">Buy Now</button></p>
             </div>
-            <div class="productCard">
+            <div class="productCard" id="product-price-4">
                 <img src="images/products/shoe13.jpeg" style="width:100%" />
                 <h1>Shoes</h1>
-                <p class="productDetails">Excellent Quality</p>
-                <p>Price 50$</p>
-                <p><button>Buy Now</button></p>
+                <p class="productDetails product-name-5">Excellent Quality</p>
+                <p class="product-price-5">Price 50$</p>
+                <p><button class="addToWishlist" onclick="addToWishlist(this.value);" value="5">Buy Now</button></p>
             </div>
-            <div class="productCard">
+            <div class="productCard" id="product-price-6">
                 <img src="images/products/shoe14.jpeg" style="width:100%" />
                 <h1>Shoes</h1>
-                <p class="productDetails">Excellent Quality</p>
-                <p>Price 60$</p>
-                <p><button>Buy Now</button></p>
+                <p class="productDetails product-name-6">Excellent Quality</p>
+                <p class="product-price-6">Price 60$</p>
+                <p><button class="addToWishlist" onclick="addToWishlist(this.value);" value="6">Buy Now</button></p>
             </div>
         </div>
         <div class="choose-text">
@@ -102,6 +105,8 @@
         </div>
 
     </section>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 <!-- Site footer -->
 <footer class="footer-distributed">
