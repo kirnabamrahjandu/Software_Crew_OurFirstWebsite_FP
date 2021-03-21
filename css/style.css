@@ -933,3 +933,15 @@ form label.floatLabel {
     padding: 0;
   }
 }
+
+.favourite-button{
+  text-align:center;
+  margin-left:83%;
+  width:6%;
+}
+.clear-favourite{
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 5px;
+  color:#ffc221 !important;
+}

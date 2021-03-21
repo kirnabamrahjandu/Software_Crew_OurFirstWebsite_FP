@@ -84,6 +84,11 @@ function showSlides() {
     setTimeout(showSlides, 3000); 
 }
 
+function clearFavourite(){
+    localStorage.removeItem('favourite');
+    window.location.reload();
+}
+
 $(function () {
 
     function setHeight() {
